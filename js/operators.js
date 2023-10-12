@@ -20,7 +20,6 @@ console.log(`a <= b: ${20 <= 20}`); // true
 console.log(`Bob > Oleg: ${'Bob' > 'Oleg'}`); // false
 console.log(`Bob > Bobich: ${'Bob' > 'Bobich'}`); // false
 
-
 console.log(`a == b: ${'5' == 5}`); // true
 console.log(`a != b: ${5 != 3}`); // true
 // strict - compare types also
