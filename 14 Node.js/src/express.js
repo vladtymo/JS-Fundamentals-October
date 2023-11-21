@@ -9,10 +9,10 @@ const express = require('express'),
 const hostname = 'localhost';
 const port = 4400;
 
-//const cors = require('cors');
-// app.use(cors({
-//     origin: '*'
-// }));
+const cors = require('cors');
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+}));
 
 // GET: ~/api/contacts
 app.get("/api/contacts", (req, res) => {
