@@ -85,12 +85,11 @@ function increment(x) {
 //     return x * x;
 // }
 
-function changeArray(array, action) {
+function changeArray(array, action) { // action - callback function
 
     for (let i = 0; i < array.length; i++)
         array[i] = action(array[i]);
 }
-
 
 let numbers = [4, 2, 5, -7, 10, 33];
 console.log("Original: ", numbers);
@@ -166,7 +165,7 @@ function test1() {
     let a = 10;
     let b = 20;
 
-    return function() {
+    return function () {
         ++a;
         console.log(`a = ${a} | b = ${b}`);
         ++b;

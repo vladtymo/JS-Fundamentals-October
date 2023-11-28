@@ -85,7 +85,7 @@ console.log(5 > 1 || 5 > 10); // true
 console.log(5 > 1 && 5 > 10); // false
 
 // return first true value
-console.log("10" || "" || null || undefined); // return first true: null
+console.log("10" || "" || null || undefined); // return first true: 10
 // return first false value
 console.log("10" && "false" && null && undefined); // return first false: null
 
@@ -101,7 +101,7 @@ email = email || "empty";
 // set default value of email == false
 console.log("Email is", email || "not entered");
 
-//let result = hours < 8 && someFunction();
+let result = hours < 8 && someFunction();
 
 // --------- thernary operator
 // syntax: condition ? true_value : false_value

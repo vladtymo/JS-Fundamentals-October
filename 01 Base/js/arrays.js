@@ -3,7 +3,7 @@
 let array = [];
 
 let colors = ["red", "green", "blue", "black"];
-const mixed = [120, null, "hello", true, [1, 2, 3], { id: 1002, title: "Super" }, () => {}];
+const mixed = [120, null, "hello", true, [1, 2, 3], { id: 1002, title: "Super" }, () => { }];
 
 colors[3] = "pink";
 // all values between are undefined
@@ -42,6 +42,8 @@ console.log("Last Index of 1: ", numbers.lastIndexOf(1)); // 1
 let firstHalf = numbers.slice(0, numbers.length / 2);
 console.log("First Half:", firstHalf);
 
+numbers[numbers.length - 1]; // last
+
 numbers.splice(1, 3);
 console.log("After splice:", numbers);
 
@@ -62,7 +64,7 @@ console.log("Numbers:", numbers);
 console.log("Filtered: ", numbers.filter((x) => x < 0));
 
 // return copy array with mapped values
-console.log("Mapped:", numbers.map((x) => x + "!"));
+console.log("Mapped:", numbers.map((x) => x > 0 ? x + '!' : x));
 
 // we can use method chain: method1().method2()
 console.log(numbers.slice(3, 7).map((x) => x * x));
@@ -71,7 +73,7 @@ console.log("Reversed:", numbers.reverse());
 
 numbers = [4, 3, 6, 2, 10];
 
-// result: 25
+// result: 13
 // current: 6
 const summ = numbers.reduce((result, current) => result + current, 0);
 console.log("Summ:", summ); // 25
