@@ -53,6 +53,8 @@ console.log("Original:", numbers);
 // ----- Uncaught Error
 //removeByIndex(numbers, 33); // Error
 
+//removeByIndex(numbers, indexToRemove); // Uncaugth exception
+
 // 1 - show error in console when error is occured
 try {
     const indexToRemove = +prompt("Enter index of the item to remove:");
@@ -91,9 +93,17 @@ try {
     // ! exception
 
 } catch (error) {
-    
+
 } finally {
     // disconnect from database
+}
+
+try {
+    let num = 10.456789;
+    console.log(email);
+
+} finally {
+    console.log("Crear resources!");
 }
 
 // TASK: calculate summ of item in the client range
@@ -131,3 +141,14 @@ try {
 }
 
 console.log("Array:", numbers);
+
+// -------------- create custom exception type
+class EmptyArrayError extends TypeError {
+    constructor(message) {
+        super(message);
+    }
+
+    message() {
+        return "Array is empty.";
+    }
+}
